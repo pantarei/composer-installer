@@ -1,6 +1,6 @@
 {
     "require": {
-        "drush/drush": "~7.0",
+        "drush/drush": "~6.0",
         "fabpot/php-cs-fixer": "dev-master",
         "phpunit/phpunit": "~4.1",
         "sami/sami": "dev-master",
