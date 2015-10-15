@@ -12,3 +12,6 @@ curl -sL https://raw.githubusercontent.com/pantarei/composer-installer/$BRANCH/c
 
 # Install plugins.
 composer global update
+
+# Register the Drupal and DrupalPractice Standard with PHPCS:
+phpcs --config-set installed_paths ~/.composer/vendor/drupal/coder/coder_sniffer
