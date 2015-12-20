@@ -1,9 +1,9 @@
 {
     "require": {
-        "drush/drush": "~6.0",
-        "fabpot/php-cs-fixer": "dev-master",
-        "phpunit/phpunit": "~4.1",
-        "sami/sami": "dev-master",
-        "drupal/coder": "~8.2"
+        "drush/drush": "@stable",
+        "fabpot/php-cs-fixer": "@stable",
+        "phpunit/phpunit": "@stable",
+        "sami/sami": "@stable",
+        "drupal/coder": "@stable"
     }
 }
