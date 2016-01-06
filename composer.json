@@ -1,6 +1,6 @@
 {
     "require": {
-        "drush/drush": "@stable",
+        "drush/drush": "~6.0",
         "fabpot/php-cs-fixer": "@stable",
         "phpunit/phpunit": "@stable",
         "sami/sami": "@stable",
