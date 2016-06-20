@@ -1,9 +1,10 @@
 {
     "require": {
+        "drupal/coder": "@stable",
         "drush/drush": "@stable",
-        "fabpot/php-cs-fixer": "@stable",
+        "friendsofphp/php-cs-fixer": "@stable",
+        "hirak/prestissimo": "@stable",
         "phpunit/phpunit": "@stable",
-        "sami/sami": "@stable",
-        "drupal/coder": "@stable"
+        "sami/sami": "@stable"
     }
 }
