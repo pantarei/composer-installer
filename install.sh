@@ -24,7 +24,7 @@ curl -sL https://squizlabs.github.io/PHP_CodeSniffer/phpcbf.phar > /usr/local/bi
 chmod a+x /usr/local/bin/phpcbf
 
 # Install PHP Coding Standards Fixer
-curl -sL https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v1.12.3/php-cs-fixer.phar > /usr/local/bin/php-cs-fixer
+curl -sL https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v2.1.0/php-cs-fixer.phar > /usr/local/bin/php-cs-fixer
 chmod a+x /usr/local/bin/php-cs-fixer
 
 # Install Sami
