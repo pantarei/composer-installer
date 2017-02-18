@@ -14,7 +14,7 @@ curl -sL https://raw.githubusercontent.com/pantarei/composer-installer/$BRANCH/c
 composer global update
 
 # Install PHPUnit
-curl -sL https://phar.phpunit.de/phpunit-6.0.phar > /usr/local/bin/phpunit
+curl -sL https://phar.phpunit.de/phpunit-5.7.phar > /usr/local/bin/phpunit
 chmod a+x /usr/local/bin/phpunit
 
 # Install PHP_CodeSniffer
@@ -38,6 +38,10 @@ chmod a+x /usr/local/bin/drush
 # Install Drupal Console
 curl -sL https://drupalconsole.com/installer > /usr/local/bin/drupal
 chmod a+x /usr/local/bin/drupal
+
+# Install Coveralls
+curl -sL https://github.com/satooshi/php-coveralls/releases/download/v1.0.1/coveralls.phar > /usr/local/bin/coveralls
+chmod a+x /usr/local/bin/coveralls
 
 # Register the Drupal and DrupalPractice Standard with PHPCS:
 phpcs --config-set installed_paths ~/.composer/vendor/drupal/coder/coder_sniffer
