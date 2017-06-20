@@ -6,42 +6,21 @@ set -o xtrace
 BRANCH="master"
 TMP_DIR=`mktemp -d -t composer-installer.XXXXXX`
 
-# Fetch package list.
-mkdir -p $HOME/.composer
-curl -sL https://raw.githubusercontent.com/pantarei/composer-installer/$BRANCH/composer.json > $HOME/.composer/composer.json
-
 # Install plugins.
+composer self-update
+composer global require --no-update consolidation/cgr:@stable
+composer global require --no-update hirak/prestissimo:@stable
 composer global update
+export PATH="$HOME/.composer/vendor/bin:$PATH"
 
-# Install PHPUnit
-curl -sL https://phar.phpunit.de/phpunit-5.7.phar > /usr/local/bin/phpunit
-chmod a+x /usr/local/bin/phpunit
-
-# Install PHP_CodeSniffer
-curl -sL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar > /usr/local/bin/phpcs
-chmod a+x /usr/local/bin/phpcs
-curl -sL https://squizlabs.github.io/PHP_CodeSniffer/phpcbf.phar > /usr/local/bin/phpcbf
-chmod a+x /usr/local/bin/phpcbf
-
-# Install PHP Coding Standards Fixer
-curl -sL https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v2.1.0/php-cs-fixer.phar > /usr/local/bin/php-cs-fixer
-chmod a+x /usr/local/bin/php-cs-fixer
-
-# Install Sami
-curl -sL http://get.sensiolabs.org/sami.phar > /usr/local/bin/sami
-chmod a+x /usr/local/bin/sami
-
-# Install Drush
-curl -sL https://s3.amazonaws.com/files.drush.org/drush.phar > /usr/local/bin/drush
-chmod a+x /usr/local/bin/drush
-
-# Install Drupal Console
-curl -sL https://drupalconsole.com/installer > /usr/local/bin/drupal
-chmod a+x /usr/local/bin/drupal
-
-# Install Coveralls
-curl -sL https://github.com/satooshi/php-coveralls/releases/download/v1.0.1/coveralls.phar > /usr/local/bin/coveralls
-chmod a+x /usr/local/bin/coveralls
+# Install/Update packages.
+cgr drupal/console            ~1.0.0-rc19
+cgr drush/drush               ~8.0
+cgr friendsofphp/php-cs-fixer ~2.3
+cgr phpunit/phpunit           ~5.7
+cgr sami/sami                 ~4.0
+cgr satooshi/php-coveralls    ~1.0
+cgr squizlabs/php_codesniffer ~3.0
 
 # Register the Drupal and DrupalPractice Standard with PHPCS:
 phpcs --config-set installed_paths ~/.composer/vendor/drupal/coder/coder_sniffer

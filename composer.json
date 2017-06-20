@@ -1,6 +1,0 @@
-{
-    "require": {
-        "drupal/coder": "@stable",
-        "hirak/prestissimo": "@stable"
-    }
-}
