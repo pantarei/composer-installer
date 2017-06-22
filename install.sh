@@ -14,7 +14,7 @@ composer global update
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 # Install/Update packages.
-cgr drupal/console            ~1.0.0-rc19
+cgr drupal/console            ~1.0.0-rc19 --stability RC
 cgr drush/drush               ~8.0
 cgr friendsofphp/php-cs-fixer ~2.3
 cgr phpunit/phpunit           ~5.7
