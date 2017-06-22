@@ -14,6 +14,7 @@ composer global update
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 # Install/Update packages.
+cgr drupal/coder              ~8.0
 cgr drupal/console            ~1.0.0-rc19 --stability RC
 cgr drush/drush               ~8.0
 cgr friendsofphp/php-cs-fixer ~2.3
@@ -23,4 +24,4 @@ cgr satooshi/php-coveralls    ~1.0
 cgr squizlabs/php_codesniffer ~3.0
 
 # Register the Drupal and DrupalPractice Standard with PHPCS:
-phpcs --config-set installed_paths ~/.composer/vendor/drupal/coder/coder_sniffer
+phpcs --config-set installed_paths ~/.composer/global/drupal/coder/vendor/drupal/coder/coder_sniffer
